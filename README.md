@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="logo.png" alt="Sparx Tutor Logo" width="200"/>
+</p>
+
 # Sparx Tutor
 
 Sparx Tutor is an AI-powered reading comprehension assistant that answers questions strictly based on the provided story content. It uses OpenAI's GPT-4 API to deliver concise, accurate answers for educational and research purposes.
