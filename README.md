@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="logo.png" alt="Sparx Tutor Logo" width="200"/>
+  <img src="ss2.png" alt="Sparx Tutor Logo" width="200"/>
 </p>
 
 # Sparx Tutor
