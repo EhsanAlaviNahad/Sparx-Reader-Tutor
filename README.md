@@ -1,7 +1,3 @@
-# Sparx-Reader-Tutor
-Sparx Tutor is an AI-powered reading comprehension assistant for personal, educational, or research use. This software is licensed under a custom Personal Use License: modification, redistribution, and commercial use are strictly prohibited. See LICENSE for details.
-
-
 # Sparx Tutor
 
 Sparx Tutor is a privacy-focused, AI-powered reading comprehension assistant designed to help users answer questions based strictly on provided story content. It leverages OpenAI's GPT-4 API to deliver concise, accurate answers for educational and research purposes.
