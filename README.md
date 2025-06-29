@@ -52,19 +52,20 @@ Sparx Tutor is an AI-powered reading comprehension assistant that answers questi
 
 ## Using Sparx Tutor in Chrome
 
-1. **Start the Flask Server**  
-   Ensure the server is running as described above.
+1. **Enable Developer Mode in Chrome Extensions**
+   - Open Google Chrome.
+   - Go to `chrome://extensions/`.
+   - Turn on **Developer mode** (toggle in the top right corner).
 
-2. **Access the Web Interface**  
-   Open Google Chrome and navigate to:
-   ```
-   http://localhost:5000
-   ```
-   (If a web interface is not included, use a compatible Chrome extension or frontend that communicates with the `/api` endpoint.)
+2. **Install the Extension**
+   - Click "Load unpacked" or drag and drop the `Sparx Tutor` folder into the Chrome Extensions page.
 
-3. **Submit Your Story and Questions**  
-   - Paste your reading passage and question (with answer choices, if applicable) into the interface.
-   - Receive concise, story-based answers from the AI.
+3. **Open Sparx Reader**
+   - Go to the Sparx Reader website and open a story.
+
+4. **Use the Extension**
+   - Click the Sparx Tutor extension icon in your Chrome toolbar.
+   - Use the **Help** button in the extension popup for detailed instructions on how to use the tool with your
 
 ---
 
