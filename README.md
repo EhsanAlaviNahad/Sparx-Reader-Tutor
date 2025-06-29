@@ -65,7 +65,7 @@ Sparx Tutor is an AI-powered reading comprehension assistant that answers questi
 
 4. **Use the Extension**
    - Click the Sparx Tutor extension icon in your Chrome toolbar.
-   - Use the **Help** button in the extension popup for detailed instructions on how to use the tool with your
+   - Use the **Help** button in the extension popup for detailed instructions on how to use the tool.
 
 ---
 
