@@ -25,7 +25,7 @@ Sparx Tutor is an AI-powered reading comprehension assistant that answers questi
 
 1. **Clone the Repository**
     ```sh
-    git clone https://github.com/yourusername/sparx-tutor.git
+    git clone https://github.com/EhsanAlaviNahad/sparx-tutor.git
     cd sparx-tutor/SparxTutor
     ```
 
