@@ -4,7 +4,7 @@
 
 # Sparx Tutor
 
-Sparx Tutor is an AI-powered reading comprehension assistant that answers questions strictly based on the provided story content. It uses OpenAI's GPT-4 API to deliver concise, accurate answers for educational and research purposes.
+Sparx Tutor is an AI-powered reading comprehension assistant that answers questions strictly based on the provided story content. It uses OpenAI's GPT 4.1 API to deliver concise, accurate answers for educational and research purposes.
 
 ---
 
