@@ -69,28 +69,6 @@ Sparx Tutor is an AI-powered reading comprehension assistant that answers questi
 
 ---
 
-## API Usage
-
-- **Endpoint:** `/api`
-- **Method:** `POST`
-- **Payload Example:**
-    ```json
-    {
-      "session_id": "optional-session-id",
-      "message": "Your story and question here"
-    }
-    ```
-- **Response:**
-    ```json
-    {
-      "success": true,
-      "data": "The answer choice or 'Not in Story'",
-      "session_id": "your-session-id"
-    }
-    ```
-
----
-
 ## License
 
 This project is licensed under a [Personal Use License](./LICENSE).  
