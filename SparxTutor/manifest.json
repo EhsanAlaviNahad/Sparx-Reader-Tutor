@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "Sparx Reader Extractor",
+  "version": "1.0",
+  "description": "Extract text and questions from Sparx Reader",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "clipboardWrite"
+  ],
+  "host_permissions": [
+    "https://api.sk-proj.com/*"
+  ],
+  "action": {
+    "default_title": "Load Text Extractor",
+    "default_icon": {
+      "16": "sparxbird.png",
+      "48": "sparxbird.png",
+      "128": "sparxbird.png"
+    }
+  },
+  "icons": {
+    "48": "sparxbird.png",
+    "128": "sparxbird.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [{
+    "resources": [
+      "help.html",
+      "combinationmark3.png",
+      "ss2.png",
+      "Sparxbird.png",
+      "Sparxmain.png",
+      "imageq.png"
+    ],
+    "matches": ["<all_urls>"]
+  }]
+}

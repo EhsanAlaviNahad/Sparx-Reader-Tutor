@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sparx Tutor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #1e3d3d;
+      --secondary-color: #428080;
+      --accent-color: #4CAF50;
+      --text-color: #2c3e50;
+      --background-color: #f8fafc;
+      --card-background: #ffffff;
+      --border-radius: 16px;
+      --transition-speed: 0.3s;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.7;
+      font-size: 16px;
+      padding-top: 86px;
+    }
+
+    @keyframes headerGradient {
+      0% {
+        background-position: 0% 50%;
+        background-size: 200% 200%;
+        filter: brightness(1) contrast(1);
+      }
+      25% {
+        background-position: 100% 50%;
+        background-size: 250% 250%;
+        filter: brightness(1.1) contrast(1.1);
+      }
+      50% {
+        background-position: 50% 100%;
+        background-size: 300% 300%;
+        filter: brightness(1.2) contrast(1.15);
+      }
+      75% {
+        background-position: 0% 100%;
+        background-size: 250% 250%;
+        filter: brightness(1.1) contrast(1.1);
+      }
+      100% {
+        background-position: 0% 50%;
+        background-size: 200% 200%;
+        filter: brightness(1) contrast(1);
+      }
+    }
+
+    @keyframes headerShine {
+      0% {
+        opacity: 0;
+        transform: translateX(-100%) translateY(-100%) rotate(25deg) scale(2);
+      }
+      25%, 75% {
+        opacity: 0.5;
+      }
+      50% {
+        opacity: 0.7;
+      }
+      100% {
+        opacity: 0;
+        transform: translateX(100%) translateY(100%) rotate(25deg) scale(0.5);
+      }
+    }
+
+    @keyframes headerTextFloat {
+      0% {
+        transform: translateY(0px) rotate(0deg);
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      25% {
+        transform: translateY(-3px) rotate(0.5deg);
+        text-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      }
+      50% {
+        transform: translateY(-5px) rotate(-0.5deg);
+        text-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      }
+      75% {
+        transform: translateY(-3px) rotate(0.5deg);
+        text-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      }
+      100% {
+        transform: translateY(0px) rotate(0deg);
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    @keyframes headerPulse {
+      0% {
+        transform: scale(1);
+        opacity: 0.7;
+      }
+      50% {
+        transform: scale(1.02);
+        opacity: 0.9;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 0.7;
+      }
+    }
+
+    header {
+      background: linear-gradient(135deg, 
+        var(--primary-color), 
+        var(--secondary-color) 25%, 
+        #2a5050 50%, 
+        #4f9999 75%, 
+        var(--primary-color)
+      );
+      background-size: 300% 300%;
+      animation: headerGradient 15s ease infinite;
+      color: #ffffff;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .header-logo {
+      height: 60px;
+      width: auto;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+      transition: transform 0.3s ease;
+      margin-left: -60px;
+      user-select: none;
+      pointer-events: none;
+      -webkit-user-drag: none;
+    }
+
+    .header-logo:hover {
+      transform: scale(1.05);
+    }
+
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .section-card {
+      background: var(--card-background);
+      border-radius: var(--border-radius);
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      transform: translateY(0);
+      transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    }
+
+    .section-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    }
+
+    h2 {
+      color: var(--primary-color);
+      font-size: 1.75rem;
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+      border-radius: 2px;
+    }
+
+    .step-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .step-list li {
+      background: rgba(66, 128, 128, 0.05);
+      margin-bottom: 15px;
+      padding: 20px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      transition: transform var(--transition-speed);
+    }
+
+    .step-list li:hover {
+      transform: scale(1.01);
+    }
+
+    .step-list li::before {
+      content: '→';
+      margin-right: 15px;
+      color: var(--secondary-color);
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+
+    .faq-item {
+      margin-bottom: 25px;
+    }
+
+    .faq-question {
+      font-weight: 600;
+      color: var(--primary-color);
+      margin-bottom: 10px;
+    }
+
+    .faq-answer {
+      color: #555;
+      padding-left: 20px;
+      border-left: 3px solid var(--secondary-color);
+    }
+
+    .contact-card {
+      background: linear-gradient(135deg, #1e3d3d11, #42808011);
+      padding: 25px;
+      border-radius: var(--border-radius);
+      margin-top: 30px;
+    }
+
+    .contact-card a {
+      color: var(--secondary-color);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color var(--transition-speed);
+    }
+
+    .contact-card a:hover {
+      color: var(--primary-color);
+    }
+
+    .disclaimer {
+      font-size: 0.9rem;
+      color: #666;
+      padding: 15px;
+      border-radius: var(--border-radius);
+      background: rgba(0, 0, 0, 0.02);
+      margin-top: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #666;
+      font-size: 0.9rem;
+      background: var(--card-background);
+      margin-top: 50px;
+      box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    @media (max-width: 768px) {
+      body {
+        font-size: 15px;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .section-card {
+        padding: 20px;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="ss2.png" alt="Sparx Tutor" class="header-logo">
+  </header>
+  
+  <main>
+    <div class="section-card">
+      <h2>How to Use Sparx Tutor</h2>
+      <ul class="step-list">
+        <li>Click on <strong>"Extract Text"</strong> to capture the story text from the webpage</li>
+        <li>Click on <strong>"Answer"</strong> to paste the story and question to the AI chat.</li>
+        <li>Use the AI to get detailed explanations of the content</li>
+        <li><strong>If you do not have an OpenAI API key, you will need to extract the text and questions manually into another AI.<br> Ex: ChatGPT, MetaAI, etc.</strong> <br></li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <div class="faq-question">Why isn't the text being extracted?</div>
+        <div class="faq-answer">
+          Ensure that the webpage has fully loaded. If content loads dynamically, try refreshing the page and running the tool again.
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">How do I use the AI Chat?</div>
+        <div class="faq-answer">
+          Simply click "Extract Text" to capture the content then click "Answer" on the question page. The AI will provide detailed explanations based on the extracted content. (Repeat For Each Question)
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">How can I use the AI?</div>
+        <div class="faq-answer">
+          Head to the GPT4.1.py File and insert your OpenAI API key. Afterward, you can interact with the AI Tutor by asking questions about the extracted content.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">How Accurate is GPT-4.1?</div>
+        <div class="faq-answer">
+          GPT-4.1 was tested with a 98% accuracy rate on Sparx Reader questions. Although keep in mind that it may not always be perfect.
+        </div>
+      </div>
+    </div>
+
+    <div class="section-card">
+      <h2>Need Help?</h2>
+      <div class="contact-card">
+        <p><strong>Note:</strong> Please only reach out if you're experiencing technical issues.</p>
+        <p>Email: <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSKhpdJxLZQHlxRXTqRHTDVpjnplZKzNNpnsxGkmLlkDxChKjfSFjrVtHfKBVGvWxRjqSchN">sparxreadertutor@gmail.com</a></p>
+        <div style="text-align: center; margin: 15px auto;">
+          <img src="sparxmain.png" alt="Sparx" style="width: 250px; height: auto; display: block; margin: 0 auto; user-select: none; pointer-events: none; -webkit-user-drag: none;">
+        </div>
+      </div>
+      
+      <div class="disclaimer">
+        Sparx Tutor is not affiliated with or endorsed by Sparx Reader, Sparx Maths, or any Sparx Company.
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Sparx Tutor. All rights reserved.</p>
+  </footer>
+</body>
+</html>
