@@ -85,4 +85,4 @@ For personal, educational, or research use only.
 
 ## Contact
 
-For questions or support, please open an issue on GitHub or contact the
+For questions or support, please contact sparxreadertutor@gmail.com.
