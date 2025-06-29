@@ -1,12 +1,12 @@
 # Sparx Tutor
 
-Sparx Tutor is a privacy-focused, AI-powered reading comprehension assistant designed to help users answer questions based strictly on provided story content. It leverages OpenAI's GPT-4 API to deliver concise, accurate answers for educational and research purposes.
+Sparx Tutor is an AI-powered reading comprehension assistant that answers questions strictly based on the provided story content. It uses OpenAI's GPT-4 API to deliver concise, accurate answers for educational and research purposes.
 
 ---
 
 ## Features
 
-- **Strict Reading Comprehension:** Answers are based solely on the provided story—no outside knowledge, guessing, or inference.
+- **Strict Reading Comprehension:** Answers are based only on the provided story—no outside knowledge, guessing, or inference.
 - **Answer Choice Matching:** Selects the answer that exactly matches the story, or responds with "Not in Story" if none match.
 - **No Explanations:** Provides only the answer, keeping responses concise and direct.
 - **Personal Use License:** For personal, educational, or research use only. Commercial use, modification, or redistribution is strictly prohibited.
@@ -36,11 +36,12 @@ Sparx Tutor is a privacy-focused, AI-powered reading comprehension assistant des
 
 3. **Set Your OpenAI API Key**
 
-    - Create a file named `.env` in the `SparxTutor` directory:
-        ```
-        OPENAI_API_KEY=your_openai_api_key_here
-        ```
-    - Alternatively, you can set the `API_KEY` variable directly in `GPT4.1.py` (not recommended for public repositories).
+    - Open `GPT4.1.py` in a text editor.
+    - Find the line:
+      ```python
+      API_KEY = ""
+      ```
+    - Enter your OpenAI API key between the quotes.
 
 4. **Run the Server**
     ```sh
@@ -82,7 +83,8 @@ Sparx Tutor is a privacy-focused, AI-powered reading comprehension assistant des
     ```json
     {
       "success": true,
-      "answer": "The answer choice or 'Not in Story'"
+      "data": "The answer choice or 'Not in Story'",
+      "session_id": "your-session-id"
     }
     ```
 
@@ -104,4 +106,4 @@ For personal, educational, or research use only.
 
 ## Contact
 
-For questions or support, please open an issue on GitHub or contact the project
+For questions or support, please open an issue on GitHub or contact the
